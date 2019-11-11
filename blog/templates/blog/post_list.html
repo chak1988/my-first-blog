@@ -9,16 +9,13 @@
             <h1><a href="/">UNION CODER 88</a></h1>
         </div>
 
-        <div>
-            <p>published: 09.11.2019, 12:14</p>
-            <h2><a href="">My first post</a></h2>
-            <p>Всю неделю разбирался с этим Python , задолбался ! но если Вы читаете это сообщение то уже не плохо (хоть что-то) , Учение -СВЕТ! :)  </p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr}}</p>
+            </div>
+        {% endfor %}
 
-        <div>
-            <p>published: 09.11.2019, 12:15</p>
-            <h2><a href="">My second post</a></h2>
-            <p> Завтра едем на дом, подышим свежим воздухом.Возможно будет металоискатель, постараемся найти древне-царские монеты, шансов заработать больше +1</p>
-        </div>
     </body>
 </html>
